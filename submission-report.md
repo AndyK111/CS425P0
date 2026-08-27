@@ -1,6 +1,6 @@
 # Submission Report
 
-- Submission generated at 08/27/2026 at 17:41:50
+- Submission generated at 08/27/2026 at 18:42:36
 
 - Machine info: Linux runnervmgx7h7 6.17.0-1022-azure #22-Ubuntu SMP Mon Jul 27 17:24:03 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux
 
@@ -17,29 +17,20 @@ Post any questions on the class discussion board for help.
 
 ## README
 
-# Project X
-
-- Name: John Doe
-- Email: johndoe@u.boisestate.edu
-- Class: CS123-001
+# Project Zero
+- Name: Andy Kempf
+- Email: AndyKempfe@u.boisestate.edu
+- Class: 425
 
 ## Known Bugs or Issues
 
-TODO: Are there any known issues?
+There are two intentionally introduced memory leaks, and an intentionally introduced null pointer crash line that is commented out in main.
 
 ## Experience
 
-TODO: Describe your experience with the project (struggles, breakthroughs, etc.).
+Got VSCode to remote connect to the onyx server so I can remotely edit and use the terminal and debug from my laptop but while executing on the onyx server. Same applies to github codespaces.
 
-## Analysis
-
-TODO: Provide your analysis of the results. If the assignment does not require
-analysis, you can remove this section.
-
-Here is an example of how to include a plot in your README:
-
-![Example Image](scripts/example_plot.png)
-
+I didn't see the instructions to install gcovr for the onyx instance, so I spent 20 minutes trying to understand why it wasn't installed, then spend another 20 trying to figure out why it didn't show up on the package manager & why I couldn't use pip to install it. Then I found the onyx.md file.
 ---
 
 
@@ -221,6 +212,8 @@ int incorrect_sum_of_two_integers(int a, int b)
 {
     // Generate a random number between 1 and 100
     int random_offset = (rand() % 100) + 1;
+    //memory leak
+    //malloc(100);
     return a + b + random_offset;
 }
 ```
@@ -290,6 +283,14 @@ int main(void)
     } else {
         printf("Failed to create greeting.\n");
     }
+
+    //memleak
+    //malloc(10000);
+
+    /* Intentional crash */
+    //volatile int* num = NULL;
+    //int h = *num;
+
     return 0;
 }
 ```
@@ -353,14 +354,14 @@ int main(void) {
 ```
 
 ## Scripts Files
-Report generated on 08/27/2026 at 17:41:51
+Report generated on 08/27/2026 at 18:42:37
 
 
 ---
 
 ## End of Report
 
-SHA-256 Hash of the report: f8ea01d5bd3e0e3e787540e560705b3eda6660d1600cdac747b56f1fc7bf88dd
+SHA-256 Hash of the report: 7e796a2db7360084568b605139961531f15fb95608d7000a7a09ce7758d48522
 
 Do not edit the generated report. Any changes will be reported as academic dishonesty
 
