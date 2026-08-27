@@ -32,3 +32,15 @@ char *get_greeting(const char *restrict name)
 
   return greeting;
 }
+
+int product_of_two_integers(int a, int b)
+{
+    return a * b;
+}
+
+int incorrect_sum_of_two_integers(int a, int b)
+{
+    // Generate a random number between 1 and 100
+    int random_offset = (rand() % 100) + 1;
+    return a + b + random_offset;
+}
