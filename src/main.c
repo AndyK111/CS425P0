@@ -19,7 +19,7 @@ int main(void)
     }
 
     //memleak
-    malloc(10000);
+    //malloc(10000);
 
     /* Intentional crash */
     //volatile int* num = NULL;
