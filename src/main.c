@@ -17,5 +17,13 @@ int main(void)
     } else {
         printf("Failed to create greeting.\n");
     }
+
+    //memleak
+    malloc(10000);
+
+    /* Intentional crash */
+    //volatile int* num = NULL;
+    //int h = *num;
+
     return 0;
 }

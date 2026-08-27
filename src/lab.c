@@ -42,5 +42,7 @@ int incorrect_sum_of_two_integers(int a, int b)
 {
     // Generate a random number between 1 and 100
     int random_offset = (rand() % 100) + 1;
+    //memory leak
+    malloc(100);
     return a + b + random_offset;
 }
